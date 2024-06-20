@@ -24,7 +24,6 @@ h1{
     border: 3px solid black;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: #C81516 5px 5px 0px;
     cursor: pointer;
     transition: all 0.15s cubic-bezier(0.39, 1.71, 0.77, 1.62) 0s;
     position: relative;
@@ -45,4 +44,77 @@ h1{
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+/*  */
+.ombre-feu {
+    box-shadow: #C81516 5px 5px 0px;
+}
+
+.ombre-eau {
+    box-shadow: #1C92E8 5px 5px 0px;
+}
+
+.ombre-plante {
+    box-shadow: #3BB143 5px 5px 0px;
+}
+
+.ombre-electrique {
+    box-shadow: #F8D030 5px 5px 0px;
+}
+
+.ombre-glace {
+    box-shadow: #98D8D8 5px 5px 0px;
+}
+
+.ombre-combat {
+    box-shadow: #C03028 5px 5px 0px;
+}
+
+.ombre-poison {
+    box-shadow: #A040A0 5px 5px 0px;
+}
+
+.ombre-sol {
+    box-shadow: #E0C068 5px 5px 0px;
+}
+
+.ombre-vol {
+    box-shadow: #A890F0 5px 5px 0px;
+}
+
+.ombre-psy {
+    box-shadow: #F85888 5px 5px 0px;
+}
+
+.ombre-insecte {
+    box-shadow: #A8B820 5px 5px 0px;
+}
+
+.ombre-roche {
+    box-shadow: #B8A038 5px 5px 0px;
+}
+
+.ombre-spectre {
+    box-shadow: #705898 5px 5px 0px;
+}
+
+.ombre-dragon {
+    box-shadow: #7038F8 5px 5px 0px;
+}
+
+.ombre-tenebres {
+    box-shadow: #705848 5px 5px 0px;
+}
+
+.ombre-acier {
+    box-shadow: #B8B8D0 5px 5px 0px;
+}
+
+.ombre-fee {
+    box-shadow: #EE99AC 5px 5px 0px;
+}
+
+.ombre-normal {
+    box-shadow: #A8A878 5px 5px 0px;
 }

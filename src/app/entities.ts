@@ -7,6 +7,15 @@ export interface PokemonInterface {
       regular: string;
     };
     types:[{
+      name:string;
       image:string;
     }];
+  };
+
+  export interface PokemonDetailInterface {
+    pokedex_id: number;
+    name: {
+      fr:string;
+    };
+    
   }
