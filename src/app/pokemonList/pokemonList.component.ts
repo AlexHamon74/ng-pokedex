@@ -5,14 +5,14 @@ import { PokemonInterface } from '../entities';
 import { PokemonListService } from '../Services/pokemon-list.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-pokemonList',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './pokemonList.component.html',
+  styleUrl: './pokemonList.component.css'
 })
-export class HomeComponent implements OnInit{
-  title = 'Home';
+export class pokemonListComponent implements OnInit{
+  title = 'pokemonList';
 
   constructor(private service: PokemonListService){}
 

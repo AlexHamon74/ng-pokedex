@@ -6,7 +6,7 @@ export interface PokemonInterface {
     sprites: {
       regular: string;
     };
-    types: Array<{
-      image: string;
-    }>;
+    types:[{
+      image:string;
+    }];
   }
