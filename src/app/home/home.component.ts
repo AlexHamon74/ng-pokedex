@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PokemonInterface } from '../entities';
+import { PokemonListService } from '../Services/pokemon-list.service';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +11,20 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   title = 'Home';
 
-  pokemons: any[] = [];
-  private url: string = 'https://tyradex.vercel.app/api/v1/gen/1';
+  constructor(private service: PokemonListService){}
 
-  ngOnInit(): void {
-    fetch(this.url)
-    .then((response) => response.json())
-    .then(data =>{
+  pokemons:PokemonInterface[] = [];
+
+  ngOnInit():void{
+    this.getPokemons();
+  }
+
+  getPokemons(){
+    this.service.fetchAll().subscribe(data =>{
       this.pokemons = data;
-      console.log(this.pokemons);
     })
   }
 

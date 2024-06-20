@@ -1,6 +1,12 @@
-// export interface pokemonCard{
-//     id:number;
-//     name:string;
-//     image:string;
-//     type:string;
-// }
+export interface PokemonInterface {
+    pokedex_id: number;
+    name: {
+      fr: string;
+    };
+    sprites: {
+      regular: string;
+    };
+    types: Array<{
+      image: string;
+    }>;
+  }

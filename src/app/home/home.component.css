@@ -34,7 +34,6 @@ h1{
 .carte:hover {
     box-shadow: none;
     transform: translate(5px, 5px);
-    z-index: 2;
 }
 .types img{
     width: 50px;
