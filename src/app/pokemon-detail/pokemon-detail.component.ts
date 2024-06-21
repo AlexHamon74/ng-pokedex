@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonDetailInterface } from '../entities';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PokemonService } from '../Services/pokemon.service';
 import { CommonModule } from '@angular/common';
 import { PokemonBgColorPipe } from '../Services/pokemon-bg-color.pipe';
@@ -8,7 +8,7 @@ import { PokemonBgColorPipe } from '../Services/pokemon-bg-color.pipe';
 @Component({
   selector: 'app-pokemon-detail',
   standalone: true,
-  imports: [CommonModule, PokemonBgColorPipe],
+  imports: [CommonModule, PokemonBgColorPipe, RouterLink],
   templateUrl: './pokemon-detail.component.html',
   styleUrl: './pokemon-detail.component.css'
 })
