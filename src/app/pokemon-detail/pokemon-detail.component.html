@@ -1,4 +1,7 @@
 <div *ngIf="pokemon">
-    <h1>{{ pokemon.name.fr }}</h1>
+    <div class="carte mb-4 {{ pokemon.types[0].name | pokemonBgColor }}">
+        
+        <h1>{{ pokemon.name.fr }}</h1>
+    </div>
    
 </div>  

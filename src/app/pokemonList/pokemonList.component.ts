@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { PokemonInterface } from '../entities';
 import { PokemonService } from '../Services/pokemon.service';
-import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
+import { PokemonTypeColorPipe } from '../Services/pokemon-type-color.pipe';
 
 
 @Component({
