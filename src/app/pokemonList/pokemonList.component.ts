@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { PokemonInterface } from '../entities';
-import { PokemonListService } from '../Services/pokemon-list.service';
+import { PokemonService } from '../Services/pokemon.service';
 import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 
 
@@ -16,7 +16,7 @@ import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 export class pokemonListComponent implements OnInit{
   title = 'pokemonList';
 
-  constructor(private service: PokemonListService){}
+  constructor(private service: PokemonService, private router: Router){}
 
   pokemons:PokemonInterface[] = [];
 
@@ -27,8 +27,11 @@ export class pokemonListComponent implements OnInit{
   getPokemons(){
     this.service.fetchAll().subscribe(data =>{
       this.pokemons = data;
-    })
+    });
   }
 
+  goToPokemonDetail(pokedex_id: number) {
+    this.router.navigate(['/pokemon', pokedex_id]);
+  }
 }
 

@@ -47,9 +47,6 @@ export class PokemonTypeColorPipe implements PipeTransform {
       case 'Électrik':
         colorClass = 'ombre-electrique';
         break;
-      case 'Fée':
-        colorClass = 'ombre-fee';
-        break;
       case 'Vol':
         colorClass = 'ombre-vol';
         break;
@@ -57,7 +54,7 @@ export class PokemonTypeColorPipe implements PipeTransform {
         colorClass = 'ombre-poison';
         break;
       case 'Fée':
-        colorClass = 'ombre-fée';
+        colorClass = 'ombre-fee';
         break;
       case 'Psy':
         colorClass = 'ombre-psy';

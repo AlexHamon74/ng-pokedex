@@ -15,7 +15,14 @@ export interface PokemonInterface {
   export interface PokemonDetailInterface {
     pokedex_id: number;
     name: {
-      fr:string;
+      fr: string;
     };
+    sprites: {
+      regular: string;
+    };
+    types:[{
+      name:string;
+      image:string;
+    }];
     
   }
