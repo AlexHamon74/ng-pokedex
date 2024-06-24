@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { PokemonInterface } from '../entities';
 import { PokemonService } from '../Services/pokemon.service';
 import { PokemonTypeColorPipe } from '../Services/pokemon-type-color.pipe';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -13,8 +14,10 @@ import { PokemonTypeColorPipe } from '../Services/pokemon-type-color.pipe';
   templateUrl: './pokemonList.component.html',
   styleUrl: './pokemonList.component.css'
 })
-export class pokemonListComponent implements OnInit{
+export class pokemonListComponent implements OnInit, OnDestroy{
+
   title = 'pokemonList';
+  dataPokemons!:Subscription;
 
   constructor(private service: PokemonService, private router: Router){}
 
@@ -23,11 +26,12 @@ export class pokemonListComponent implements OnInit{
   ngOnInit():void{
     this.getPokemons();
   }
+  ngOnDestroy(): void {
+      this.dataPokemons.unsubscribe();
+  }
 
   getPokemons(){
-    this.service.fetchAll().subscribe(data =>{
-      this.pokemons = data;
-    });
+    this.dataPokemons = this.service.fetchAll().subscribe(data =>{ this.pokemons = data });
   }
 
   goToPokemonDetail(pokedex_id: number) {
