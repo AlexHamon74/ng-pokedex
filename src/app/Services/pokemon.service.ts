@@ -16,7 +16,7 @@ export class PokemonService {
     return this.http.get<PokemonInterface[]>(this.url);
   }
 
-  fetchById(id: number) {
+  fetchById(id: any) {
     return this.http.get<PokemonDetailInterface>(`${this.urlDetail}/${id}`);
   }
 }
