@@ -43,6 +43,11 @@ h1 {
     border-radius: 50px;
     margin-left: 5px;
 }
+@media(max-width: 576px){
+    .types img{
+        width: 30%;
+    }
+}
 
 .middle img{
     width: 100%;
