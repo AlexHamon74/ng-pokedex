@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PokemonDetailInterface, PokemonInterface } from '../entities';
+import { PokemonInterface } from '../entities';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,6 @@ export class PokemonService {
   }
 
   fetchById(id: any) {
-    return this.http.get<PokemonDetailInterface>(`${this.urlDetail}/${id}`);
+    return this.http.get<PokemonInterface>(`${this.urlDetail}/${id}`);
   }
 }

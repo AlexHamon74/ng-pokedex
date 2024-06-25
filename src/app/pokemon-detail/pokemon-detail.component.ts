@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { PokemonDetailInterface } from '../entities';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { PokemonInterface } from '../entities';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PokemonService } from '../Services/pokemon.service';
 import { CommonModule } from '@angular/common';
@@ -15,11 +15,13 @@ import { Subscription } from 'rxjs';
 })
 export class PokemonDetailComponent implements OnInit, OnDestroy{
 
-  pokemon: PokemonDetailInterface | undefined;
-  isShiny:boolean = false;
+  pokemon: PokemonInterface | undefined;
   private dataPokemonDetail!:Subscription;
+  service = inject(PokemonService);
 
-  constructor(private route: ActivatedRoute, private service: PokemonService) {}
+  isShiny:boolean = false;
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.getPokemonDetails();
