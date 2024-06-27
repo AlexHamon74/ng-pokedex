@@ -1,10 +1,10 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { PokemonInterface } from '../entities';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { PokemonService } from '../Services/pokemon.service';
 import { CommonModule } from '@angular/common';
-import { PokemonBgColorPipe } from '../Services/pokemon-bg-color.pipe';
 import { Subscription } from 'rxjs';
+import { PokemonBgColorPipe } from '../shared/pipes/pokemon-bg-color.pipe';
+import { PokemonService } from '../shared/pipes/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-detail',
