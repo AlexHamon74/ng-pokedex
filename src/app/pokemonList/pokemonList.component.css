@@ -21,6 +21,16 @@ h1 {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+.filtre{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+@media(max-width: 576px){
+    .filtre{
+        width: 400px;
+    }
+}
 
 
 /* Partie main */

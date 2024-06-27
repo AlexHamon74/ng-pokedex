@@ -25,5 +25,12 @@ export interface PokemonInterface {
     name:string;
     image:string;
   }];
-  
+}
+
+export interface TypeInterface{
+  id: number;
+  name: {
+    fr: string;
+  }
+  sprites: string;
 }

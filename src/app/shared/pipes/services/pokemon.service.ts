@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PokemonInterface } from '../../../entities';
+import { PokemonInterface, TypeInterface } from '../../../entities';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ export class PokemonService {
   constructor(private http:HttpClient) { }
 
   url = "https://tyradex.vercel.app/api/v1/gen/1";
-  urlDetail = "https://tyradex.vercel.app/api/v1/pokemon"
+  urlDetail = "https://tyradex.vercel.app/api/v1/pokemon";
+  urlType = "https://tyradex.tech/api/v1/types";
 
   fetchAll(){
     return this.http.get<PokemonInterface[]>(this.url);
@@ -18,5 +20,9 @@ export class PokemonService {
 
   fetchById(id: any) {
     return this.http.get<PokemonInterface>(`${this.urlDetail}/${id}`);
+  }
+
+  fetchAllTypes(){
+    return this.http.get<TypeInterface[]>(this.urlType);
   }
 }
