@@ -12,7 +12,7 @@ export class PokemonService {
 
   url = "https://tyradex.vercel.app/api/v1/gen/1";
   urlDetail = "https://tyradex.vercel.app/api/v1/pokemon";
-  urlType = "https://tyradex.tech/api/v1/types";
+  urlType = "https://tyradex.vercel.app/api/v1/types";
 
   fetchAll(){
     return this.http.get<PokemonInterface[]>(this.url);
