@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { PokemonInterface } from '../../entities';
+import { PokemonInterface } from '../entities';
 
 @Pipe({
   name: 'search',

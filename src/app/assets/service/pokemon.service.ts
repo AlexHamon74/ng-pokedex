@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PokemonInterface, TypeInterface } from '../../entities';
+import { PokemonInterface, TypeInterface } from '../entities';
 
 @Injectable({
   providedIn: 'root'

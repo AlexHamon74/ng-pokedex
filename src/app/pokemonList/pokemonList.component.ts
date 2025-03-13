@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PokemonInterface, TypeInterface } from '../entities';
+import { PokemonInterface, TypeInterface } from '../assets/entities';
 import { Subscription } from 'rxjs';
 import { PokemonTypeColorPipe } from '../assets/pipe/pokemon-type-color.pipe';
 import { PokemonService } from '../assets/service/pokemon.service';
