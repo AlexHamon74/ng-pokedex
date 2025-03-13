@@ -1,7 +1,7 @@
 <div *ngIf="pokemon">
     
     <section class=" header {{ pokemon.types[0].name | pokemonBgColor }}">
-        <i class="fa-solid fa-arrow-left arrow" routerLink="/pokemons"></i>
+        <i class="fa-solid fa-arrow-left arrow" routerLink=""></i>
         <img [src]="isShiny ? pokemon.sprites.shiny : pokemon.sprites.regular" alt="" class="img-fluid">
         <div class="shiny">
             <button (click)="toggleshiny()">

@@ -1,4 +1,5 @@
 export interface PokemonInterface {
+  status: number;
   pokedex_id: number;
   name: {
     fr: string;
